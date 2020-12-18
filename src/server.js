@@ -9,4 +9,4 @@ const server = new GraphQLServer({ schema });
 
 server.express.use(logger("dev")); //요청로그
 
-server.start({ port: PORT }, () => console.log(`✅ Server Running on http://localhost:${PORT}`));
+server.start({ port: PORT }, () => console.log(`✅ Server Running on http://localhost:${PORT}✅`));
