@@ -1,7 +1,12 @@
-require("dotenv").config(); //.env 외부환경변수사용 process.env.~ 으로 접근
+import dotenv from "dotenv";
+import path from "path";
+dotenv.config({ path: path.resolve(__dirname, ".env") }); //.env src디렉토리에서 실행
+
 import { GraphQLServer } from "graphql-yoga"; //graphql server
 import logger from "morgan"; // 미들웨어
 import schema from "./schema";
+
+// sendSecretMail("wjswowns1234@naver.com", "123");
 
 const PORT = process.env.PORT || 4000;
 

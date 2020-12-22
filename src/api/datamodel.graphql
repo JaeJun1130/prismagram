@@ -3,7 +3,7 @@ type User {
     username: String!
     email: String!
     fistName: String
-    lastName: String!
+    lastName: String
     bio: String
     following: [User!]!
     followers: [User!]!
@@ -16,12 +16,12 @@ type User {
 
 type Post {
     id: ID!
-    location: String
+    location: String!
     caption: String!
     user: User!
     files: [File!]!
     likes: [Like!]!
-    comment: [Comment!]!
+    comments: [Comment!]
 }
 
 type Like {

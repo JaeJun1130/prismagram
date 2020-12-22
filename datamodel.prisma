@@ -3,7 +3,7 @@ type User {
   username: String! @unique
   email: String! @unique
   fistName: String @defalut(value:"")
-  lastName: String!
+  lastName: String
   bio: String
   following: [User!]! @relation(name: "FollowRelation")
   followers: [User!]! @relation(name: "FollowRelation")
@@ -11,16 +11,17 @@ type User {
   likes: [Like!]!
   comments:[Comment!]!
   rooms:[Room!]!
+  loginSecret: String
 }
 
 type Post {
-  id: ID! @id
-  location : String
-  caption : String!
-  user:User!
-  files : [File!]!
-  likes: [Like!]!
-  comment:[Comment!]!
+id: ID! @id
+location: String!
+caption: String!
+user: User!
+files: [File!]!
+likes: [Like!]!
+comments: [Comment!]
 }
 
 type Like {
@@ -30,10 +31,10 @@ type Like {
 }
 
 type Comment {
-  id: ID! @id
-  text : String!
-  user : User!  
-  post  : Post!
+id: ID! @id
+text: String!
+user: User!
+post: Post!
 }
 
 type File {
