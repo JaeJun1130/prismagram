@@ -1,16 +1,35 @@
 import passport from "passport";
-import JwtStrategy from "passport-jwt";
+import { Strategy, ExtractJwt } from "passport-jwt";
 
-import dotenv from "dotenv";
-import path from "path";
-dotenv.config({ path: path.resolve(__dirname, ".env") }); //.env src디렉토리에서 실행
+import { prisma } from "../generated/prisma-client";
 
 const jwtOption = {
     //토큰을 입력받아서 정보를 해석
-    jwtFromRequest: JwtStrategy.ExtractJwt.fromAuthHeaderAsBearerToken(),
-    secret: process.env.JWT_SECRET,
+    jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
+    secretOrKey: process.env.JWT_SECRET,
 };
 
-const verifyUser = (payload, done) => {}; //해석된 정보를 콜백 함수로 전달, done-> 사용자를 찾았을 때 호출하는함수
+const verifyUser = async (payload, done) => {
+    //해석된 정보를 콜백 함수로 전달, done-> 사용자를 찾았을 때 호출하는함수
+    try {
+        const user = await prisma.user({ id: payload.id });
+        if (user !== null) {
+            return done(null, user); //사용자가 있으면 return
+        } else {
+            return done(null, false); // 없으면 false
+        }
+    } catch (error) {
+        return done(error, false);
+    }
+};
 
-passport.use(new JwtStrategy(jwtOption, verifyUser));
+export const authenticateJwt = (req, res, next) =>
+    passport.authenticate("jwt", { session: false }, (error, user) => {
+        if (user) {
+            req.user = user;
+        }
+        next();
+    })(req, res, next);
+
+passport.use(new Strategy(jwtOption, verifyUser));
+passport.initialize();

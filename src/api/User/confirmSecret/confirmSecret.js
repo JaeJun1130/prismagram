@@ -1,3 +1,4 @@
+import { generateToken } from "../../../utils";
 import { prisma } from "../../../../generated/prisma-client";
 
 export default {
@@ -6,8 +7,7 @@ export default {
             const { email, secret } = args;
             const user = await prisma.user({ email: email });
             if (user.loginSecret === secret) {
-                //JWT
-                return "TOKEN";
+                return generateToken(user.id);
             } else {
                 throw Error("Wrong email/secret conviation");
             }
