@@ -5,7 +5,7 @@ import { prisma } from "../generated/prisma-client";
 
 const jwtOption = {
     //토큰을 입력받아서 정보를 해석
-    jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
+    jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(), // 헤더에서 토큰을 가져옴
     secretOrKey: process.env.JWT_SECRET,
 };
 
