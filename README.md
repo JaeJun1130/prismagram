@@ -13,8 +13,9 @@
 -   [x] Comment on a phote
 -   [x] Serach by user
 -   [x] Serach by location
+-   [x] Follow User
+-   [x] Unfollow User
 -   [ ] See use profile
--   [ ] Follow / Unfollow User
 -   [ ] Edit my profile
 -   [ ] Upload photos
 -   [ ] Edit the phote(Delete)
