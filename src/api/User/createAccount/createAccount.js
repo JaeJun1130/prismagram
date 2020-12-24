@@ -1,5 +1,5 @@
 import { prisma } from "../../../../generated/prisma-client";
-
+//회원가입
 export default {
     Mutation: {
         createAccount: async (_, args_) => {

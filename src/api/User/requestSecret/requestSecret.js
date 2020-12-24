@@ -1,6 +1,7 @@
 import { secretGenerator, sendSecretMail } from "../../../utils";
 import { prisma } from "../../../../generated/prisma-client";
 
+//로그인을 하면 해당 메일로 시크릿값을 보냄
 export default {
     Mutation: {
         requestSecret: async (_, args, { request }) => {

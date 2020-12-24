@@ -8,8 +8,8 @@
 
 -   [x] Create account
 -   [x] Request Secret
--   [ ] Confirm secret (Login)
--   [ ] Like / Unlike a phote
+-   [x] Confirm secret (Login)
+-   [x] Like / Unlike a phote
 -   [ ] Comment on a phote
 -   [ ] Serach by user
 -   [ ] Serach by location

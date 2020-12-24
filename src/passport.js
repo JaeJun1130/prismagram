@@ -10,6 +10,7 @@ const jwtOption = {
 };
 
 const verifyUser = async (payload, done) => {
+    // 사용자가 요청한 값이 payload
     //해석된 정보를 콜백 함수로 전달, done-> 사용자를 찾았을 때 호출하는함수
     try {
         const user = await prisma.user({ id: payload.id });
@@ -24,6 +25,7 @@ const verifyUser = async (payload, done) => {
 };
 
 export const authenticateJwt = (req, res, next) =>
+    //user 값이 payload
     passport.authenticate("jwt", { session: false }, (error, user) => {
         if (user) {
             req.user = user;
