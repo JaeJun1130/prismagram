@@ -10,9 +10,9 @@
 -   [x] Request Secret
 -   [x] Confirm secret (Login)
 -   [x] Like / Unlike a phote
--   [ ] Comment on a phote
--   [ ] Serach by user
--   [ ] Serach by location
+-   [x] Comment on a phote
+-   [x] Serach by user
+-   [x] Serach by location
 -   [ ] See use profile
 -   [ ] Follow / Unfollow User
 -   [ ] Edit my profile

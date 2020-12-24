@@ -2,7 +2,7 @@ type User {
   id: ID! @id
   username: String! @unique
   email: String! @unique
-  fistName: String @defalut(value:"")
+  firstName: String @defalut(value:"")
   lastName: String
   bio: String
   following: [User!]! @relation(name: "FollowRelation")

@@ -2,7 +2,7 @@ type User {
     id: ID!
     username: String!
     email: String!
-    fistName: String
+    firstName: String
     lastName: String
     bio: String
     following: [User!]!
