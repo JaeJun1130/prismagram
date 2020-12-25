@@ -15,8 +15,10 @@
 -   [x] Serach by location
 -   [x] Follow User
 -   [x] Unfollow User
--   [ ] See use profile
 -   [x] Edit my profile
+-   [x] See user profile
+-   [x] See My profile
+-   [x] See full Posts
 -   [ ] Upload photos
 -   [ ] Edit the phote(Delete)
 -   [ ] See the feed

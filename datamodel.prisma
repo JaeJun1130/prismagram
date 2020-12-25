@@ -56,3 +56,9 @@ type Message {
   to: User! @relation(name:"To")
   room: Room!
 }
+
+type userProfile {
+    id: ID! @id
+    userProfile: User!
+    posts: [Post!]!
+}
