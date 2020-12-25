@@ -4,6 +4,7 @@ import logger from "morgan"; // 미들웨어
 import schema from "./schema";
 import "./passport";
 import { authenticateJwt } from "./passport";
+import { isAuthenticated } from "./middlewares";
 
 // sendSecretMail("wjswowns1234@naver.com", "123");
 
@@ -11,7 +12,7 @@ const PORT = process.env.PORT || 4000;
 
 const server = new GraphQLServer({
     schema,
-    context: ({ request }) => ({ request }),
+    context: ({ request }) => ({ request, isAuthenticated }),
 }); //context -> resolver 사이의 정보를 공유할때 사용
 
 server.express.use(logger("dev")); //요청로그

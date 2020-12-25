@@ -16,7 +16,7 @@
 -   [x] Follow User
 -   [x] Unfollow User
 -   [ ] See use profile
--   [ ] Edit my profile
+-   [x] Edit my profile
 -   [ ] Upload photos
 -   [ ] Edit the phote(Delete)
 -   [ ] See the feed
