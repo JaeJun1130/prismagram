@@ -4,6 +4,9 @@ type User {
   email: String! @unique
   firstName: String @defalut(value:"")
   lastName: String
+  fullName: String
+  itsMe: Boolean!
+  amIFollowing: Boolean!
   bio: String
   following: [User!]! @relation(name: "FollowRelation")
   followers: [User!]! @relation(name: "FollowRelation")
@@ -59,6 +62,6 @@ type Message {
 
 type userProfile {
     id: ID! @id
-    userProfile: User!
+    user: User!
     posts: [Post!]!
 }

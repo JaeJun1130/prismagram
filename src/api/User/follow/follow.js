@@ -16,3 +16,6 @@ export default {
         },
     },
 };
+
+// 위 {"Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNraXZ1ejdhZTdiaDUwYTI2ejVmbXI5YzciLCJpYXQiOjE2MDg3OTcxMTJ9.G5c-KxnlxHEcJc21Y40Meg_KD_VxaLP_rQLtj-HeVcE"}
+// 아래 {"Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNraXp3Nm43d3NmeTcwOTk5bndyMnhyc3IiLCJpYXQiOjE2MDg3MDA0NjR9.vEXjXop1zCBLqHdqAucPKUk6w2HZdrfBxNimQBZpGBE"}
