@@ -14,10 +14,14 @@ export default {
                 .likesConnection({ where: { post: { id: id } } })
                 .aggregate()
                 .count();
+            const files = await prisma.post({ id: id }).files();
+            const user = await prisma.post({ id: id }).user();
             return {
                 post,
                 comments,
                 likeCount,
+                user,
+                files,
             };
         },
     },

@@ -22,3 +22,7 @@
 -   [ ] Upload photos
 -   [ ] Edit the phote(Delete)
 -   [ ] See the feed
+-   [ ] See rooms
+-   [ ] See room
+-   [ ] Send private Message
+-   [ ] Receive DM
