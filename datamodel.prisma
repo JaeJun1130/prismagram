@@ -25,6 +25,7 @@ user: User!
 files: [File!]!
 likes: [Like!]!
 comments: [Comment!]
+likeCount: Int!
 }
 
 type Like {
