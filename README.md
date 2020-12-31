@@ -19,7 +19,7 @@
 -   [x] See user profile
 -   [x] See My profile
 -   [x] See full Posts
--   [ ] Upload photos
+-   [x] Upload photos
 -   [ ] Edit the phote(Delete)
 -   [ ] See the feed
 -   [ ] See rooms
