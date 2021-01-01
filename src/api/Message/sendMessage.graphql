@@ -1,0 +1,3 @@
+type Mutation {
+    sendMessage(roomId: String, message: String!, toId: String): Message! # 메세지방이 없으면 방을 만듬
+}
