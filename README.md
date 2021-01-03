@@ -21,8 +21,8 @@
 -   [x] See full Posts
 -   [x] Upload photos
 -   [x] Edit the phote(Delete)
--   [ ] See the feed
--   [ ] See rooms
--   [ ] See room
--   [ ] Send private Message
--   [ ] Receive DM
+-   [x] See the feed
+-   [x] See rooms
+-   [x] See room
+-   [x] Send private Message
+-   [x] Receive DM
