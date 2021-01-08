@@ -8,7 +8,6 @@ export default {
                 OR: [{ username: username }, { email: email }],
             });
             if (check == true) {
-                console.log("이미 존재하는 계정입니다.");
                 return false;
             } else {
                 await prisma.createUser({

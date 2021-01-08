@@ -2,8 +2,8 @@ type Mutation {
     createAccount(
         username: String!
         email: String!
-        fistName: String
-        lastName: String
+        firstName: String!
+        lastName: String!
         bio: String
     ): Boolean!
 }
