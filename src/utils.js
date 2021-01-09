@@ -7,7 +7,7 @@ import jwt from "jsonwebtoken";
 export const secretGenerator = () => {
     //랜덤의 값을 섞어줌
     const rendomNumber = Math.floor(Math.random() * wordObject.length);
-    return `${wordObject[rendomNumber]}  ${aa[rendomNumber]}`;
+    return `${wordObject[rendomNumber]} ${aa[rendomNumber]}`;
 };
 /*------------------*/
 
